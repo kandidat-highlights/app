@@ -5,15 +5,27 @@
     <div class="row center-align">
         <nav>
             <div class="nav-wrapper">
-                <form>
+                <form (submit)="submit()">
                     <div class="input-field white black-text">
-                        <input id="write_title" type="search" required autofocus>
-                        <label class="label-icon" for="mode_edit"><i class="material-icons black-text">mode_edit</i></label>
-                        <i class="material-icons">close</i>
+                        <input id="write_title" type="search" required autofocus [(ngModel)]="title" name="title" placeholder="Write a nice title...">
+                        <label class="label-icon" for="write_title"><i class="material-icons black-text">mode_edit</i></label>
+                        <i class="material-icons" (click)="title=''">close</i>
                     </div>
+                    <button type="submit" style="display:none">hidden submit</button>
                 </form>
             </div>
         </nav>
+    </div>
+
+    <div class="row" *ngIf="prediction">
+        <div class="col s3" *ngFor="let user of prediction.predictions">
+            <div class="card center-align">
+                <br />
+                <h4>{{user}}</h4>
+                <br />
+            </div>
+
+        </div>
     </div>
 
 </div>

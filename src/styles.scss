@@ -8,5 +8,6 @@ $roboto-font-path: "~materialize-css/fonts/roboto/";
 body {
     background-image: url('assets/bkg.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
 }
