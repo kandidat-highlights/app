@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~materialize-css/sass/components/color';
+$primary-color: color("blue", "base");
+$secondary-color: color("amber", "base");
+$roboto-font-path: "~materialize-css/fonts/roboto/";
+@import "~materialize-css/sass/materialize.scss";
+body {
+    background-image: url('assets/bkg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
